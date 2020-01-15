@@ -1,0 +1,320 @@
+﻿.left {
+    float: left;
+    background-color: #fff;
+    margin-left: 0;
+    margin-right: 15%;
+    margin-top: 0;
+    width: 350px;
+    height: 100%;
+    position: fixed;
+    padding: 0;
+    z-index: 1;
+}
+
+.left p {
+    margin-left: 10px;
+    margin-right: 50px;
+    margin-top: 200px;
+    padding-top: 75px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.left img {
+    background-color: transparent;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 0;
+    /*border: 3px solid blue;*/
+}
+
+.line img {
+    float: right;
+    background-color: transparent;
+    margin-right: 0;
+    margin-left: 315px;
+    margin-top: 1%;
+    height: 100%;
+    width: 30px;
+    position: fixed;
+    /*border: 3px solid magenta;*/
+    z-index: 2;
+}
+
+.left ul {
+    list-style: none;
+    text-align: left;
+    font-size: 20pt;
+    margin-left: 0;
+    margin-right: 300px;
+    margin-top: 0;
+    height: 100%;
+    width: 300px;
+    padding: 0;
+    position: fixed;
+    /*border: 3px solid magenta;*/
+}
+
+    .left ul li {
+        padding-bottom: 5%;
+        width: 100%;
+        /*border: 3px solid yellow;*/
+    }
+
+        .left ul li a {
+            font-family: 'Raleway', sans-serif;
+            display: inline-block;
+            text-decoration: none;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #dadada;
+            background-color: #808080;
+            width: 300px;
+        }
+
+            .left ul li a:hover {
+                text-decoration: none;
+                background-color: #dadada;
+                color: black;
+                transition: background-color 5s;
+                transition: color 4s;
+            }
+
+#active {
+    text-decoration: none;
+    color: black;
+    background-color: #dadada;
+}
+
+.right {
+    float: right;
+    background-color: #808080;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    padding: 0;
+    height: 100%;
+    width: 90%;
+    box-shadow: 10px 0px 25px black inset;
+    /*overflow-x: auto;*/
+    /*border: 3px solid red;*/
+}
+
+.rightfront {
+    float: right;
+    background-color: #808080;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    padding: 0;
+    box-shadow: 10px 0px 25px black inset;
+    /*overflow-x: auto;*/
+    /*border: 3px solid red;*/
+}
+
+.rightbig {
+    float: right;
+    background-color: #808080;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    padding: 0;
+    width: 90%;
+    box-shadow: 10px 0px 25px black inset;
+    /*overflow-x: auto;*/
+    /*border: 3px solid red;*/
+}
+
+.righttall {
+    float: right;
+    background-color: #808080;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    padding: 0;
+    box-shadow: 10px 0px 25px black inset;
+    /*display: flex;
+	flex-wrap: wrap;*/
+    /*overflow-x: auto;*/
+    /*border: 3px solid red;*/
+}
+
+.img {
+    margin: 0;
+    max-width: 1900px;
+    min-width: 750px;
+}
+
+    .img ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 10px;
+        margin-right: 25px;
+    }
+
+    .img li {
+        display: inline;
+    }
+
+    .img img {
+        width: 15%;
+        max-height: 100%;
+        padding: 0px;
+        margin-right: 20px;
+        margin-bottom: 50px;
+        vertical-align: top;
+        box-shadow: 5px 5px 10px black;
+    }
+
+    .img h1 {
+        color: white;
+        font-size: 20pt;
+        padding-top: 10px;
+        margin-top: 0;
+        margin-bottom: 2px;
+        margin-left: 25px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .img hr {
+        width: 600px;
+        height: 2px;
+        float: left;
+        background-color: white;
+        color: white;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 25px;
+    }
+
+.imgfull img {
+    min-height: 10%;
+    min-width: 10%;
+    max-width: 75%;
+    padding-bottom: 50px;
+    margin-right: 30px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    display: grid;
+    height: 100%;
+}
+
+
+.imgfull h1 {
+    color: white;
+    font-size: 20pt;
+    padding-top: 10px;
+    margin-top: 0;
+    margin-bottom: 2px;
+    margin-left: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.imgfull h2 {
+    color: #dadada;
+    font-size: 14pt;
+    font-weight: lighter;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 5px;
+    margin-left: 45px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.imgfull hr {
+    width: 600px;
+    height: 2px;
+    float: left;
+    background-color: white;
+    color: white;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 25px;
+}
+
+.imgtall img {
+    min-height: 10%;
+    min-width: 10%;
+    max-width: 50%;
+    padding-bottom: 50px;
+    margin-right: 30px;
+    margin-left: 20px;
+    margin-bottom: 0;
+    display: grid;
+    height: 100%;
+    /*object-fit: contain;*/
+}
+
+
+.imgtall h1 {
+    color: white;
+    font-size: 20pt;
+    padding-top: 10px;
+    margin-top: 0;
+    margin-bottom: 2px;
+    margin-left: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.imgtall h2 {
+    color: #dadada;
+    font-size: 14pt;
+    font-weight: lighter;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 5px;
+    margin-left: 45px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.imgtall hr {
+    width: 600px;
+    height: 2px;
+    float: left;
+    background-color: white;
+    color: white;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 25px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 8px 8px;
+}
+
+    .column img {
+        margin-top: 20px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 40%;
+        max-width: 40%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
