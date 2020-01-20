@@ -27,6 +27,12 @@
         /*border: 3px solid blue;*/
     }
 
+@media (max-width:767px) {
+    .line img {
+        display: none;
+    }
+}
+
 .line img {
     float: right;
     background-color: #fff;
@@ -38,7 +44,7 @@
     z-index: 2;
 }
 
-#active{
+#active {
     text-decoration: none !important;
     color: black !important;
     background-color: #dadada !important;
@@ -46,48 +52,130 @@
 
 nav {
     background-color: #fff;
-    margin-right: 15%;
-    height: 100%;
 }
 
-.leftnavbutton ul {
-    list-style: none;
-    text-align: left;
-    font-size: 20pt;
-    margin-left: 0;
-    margin-top: 0;
-    height: 100%;
-    width: 300px;
-    padding: 0;
-    /*border: 3px solid magenta;*/
-}
-
-    .leftnavbutton ul li {
-        padding-bottom: 5%;
-        width: 100%;
-        /*border: 3px solid yellow;*/
+@media (min-width:200px) {
+    .leftnavbutton ul {
+        list-style: none;
+        text-align: left;
+        font-size: 12pt;
+        margin-left: 0;
+        margin-top: 0;
+        height: 100%;
+        width: 50px;
+        padding: 0;
+        /*border: 3px solid magenta;*/
     }
 
-        .leftnavbutton ul li a {
-            font-family: 'Raleway', sans-serif;
-            display: inline-block;
-            text-decoration: none;
-            padding-left: 5px;
-            padding-right: 5px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            color: #dadada !important;
-            background-color: #808080;
-            width: 300px;
+        .leftnavbutton ul li {
+            padding-bottom: 5%;
+            width: 100%;
+            /*border: 3px solid yellow;*/
         }
 
-            .leftnavbutton ul li a:hover {
+            .leftnavbutton ul li a {
+                font-family: 'Raleway', sans-serif;
+                display: inline-block;
                 text-decoration: none;
-                background-color: #dadada;
-                color: black;
-                transition: background-color 5s;
-                transition: color 4s;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: #dadada !important;
+                background-color: #808080;
+                width: 300px;
             }
+
+                .leftnavbutton ul li a:hover {
+                    text-decoration: none;
+                    background-color: #dadada;
+                    color: black;
+                    transition: background-color 5s;
+                    transition: color 4s;
+                }
+}
+
+@media (min-width:525px) {
+    .leftnavbutton ul {
+        list-style: none;
+        text-align: left;
+        font-size: 12pt;
+        margin-left: 0;
+        margin-top: 0;
+        height: 100%;
+        width: 50px;
+        padding: 0;
+        /*border: 3px solid magenta;*/
+    }
+
+        .leftnavbutton ul li {
+            padding-bottom: 5%;
+            width: 100%;
+            /*border: 3px solid yellow;*/
+        }
+
+            .leftnavbutton ul li a {
+                font-family: 'Raleway', sans-serif;
+                display: inline-block;
+                text-decoration: none;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: #dadada !important;
+                background-color: #808080;
+                width: 300px;
+            }
+
+                .leftnavbutton ul li a:hover {
+                    text-decoration: none;
+                    background-color: #dadada;
+                    color: black;
+                    transition: background-color 5s;
+                    transition: color 4s;
+                }
+}
+
+@media (min-width:768px) {
+    .leftnavbutton ul {
+        list-style: none;
+        text-align: left;
+        font-size: 20pt;
+        margin-left: 0;
+        margin-top: 0;
+        height: 100%;
+        width: 300px;
+        padding: 0;
+        /*border: 3px solid magenta;*/
+    }
+
+        .leftnavbutton ul li {
+            padding-bottom: 5%;
+            width: 100%;
+            /*border: 3px solid yellow;*/
+        }
+
+            .leftnavbutton ul li a {
+                font-family: 'Raleway', sans-serif;
+                display: inline-block;
+                text-decoration: none;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: #dadada !important;
+                background-color: #808080;
+                width: 300px;
+            }
+
+                .leftnavbutton ul li a:hover {
+                    text-decoration: none;
+                    background-color: #dadada;
+                    color: black;
+                    transition: background-color 5s;
+                    transition: color 4s;
+                }
+}
 
 .right {
     float: right;
@@ -115,8 +203,6 @@ nav {
     position: absolute;
     padding: 0;
     box-shadow: 10px 0px 25px black inset;
-    /*overflow-x: auto;*/
-    /*border: 3px solid red;*/
 }
 
 .rightbig {
@@ -129,9 +215,8 @@ nav {
     position: absolute;
     padding: 0;
     width: 90%;
+    height: 100%;
     box-shadow: 10px 0px 25px black inset;
-    /*overflow-x: auto;*/
-    /*border: 3px solid red;*/
 }
 
 .righttall {
@@ -208,8 +293,8 @@ nav {
     margin-left: 20px;
     margin-bottom: 0;
     display: grid;
-    height: 100%;
 }
+
 
 
 .imgfull h1 {
@@ -231,6 +316,16 @@ nav {
     margin-bottom: 5px;
     margin-left: 45px;
     font-family: 'Raleway', sans-serif;
+}
+
+@media (min-width:2000px) {
+    .imgfull h1 {
+        font-size: 2.0vw;
+    }
+
+    .imgfull h2 {
+        font-size: 2.0vw;
+    }
 }
 
 .imgfull hr {
@@ -290,6 +385,13 @@ nav {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 25px;
+}
+
+figure {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    position: relative;
 }
 
 /* Create four equal columns that sits next to each other */

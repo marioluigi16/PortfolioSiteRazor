@@ -1,0 +1,19 @@
+﻿@page
+@model RazorTest.Pages.artwork.comiccoverModel
+@{
+    ViewData["Title"] = Constants.NAME_WITH_COLON + "Comic Book Cover";
+    ViewData["Blurb"] = "Medium:  Photoshop\n\n"
+        + "Notes:  Using photos, this is a composition created for an imagined comic book series.";
+}
+
+<div>
+    <div class='rightbig'>
+        <div class='imgfull'>
+            <h1>Digital Artwork</h1>
+            <h2>Comic Book Cover - 2013</h2>
+            <hr>
+            <br>
+            <figure><img src='~/art/comiccover.png' alt='Comic Book Cover'></figure>
+        </div>
+    </div>
+</div>

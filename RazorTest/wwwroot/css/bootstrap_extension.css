@@ -1,37 +1,71 @@
-﻿body {
-    padding-top: 90px
-}
-
-.jumbotron-ext {
+﻿.jumbotron-ext {
     background-color: #808080;
     box-shadow: 10px 0px 25px black inset;
 }
 
-@media (min-width:768px) {
-    body {
-        padding-top: 0
-    }
-}
-
-@media (min-width:768px) {
-    body {
-        margin-left: 350px
-    }
-}
-
 .navbar.fixed-left {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     background-color: #fff !important;
-    z-index: 1030
+}
+
+#blurb {
+    font-family: 'Raleway', sans-serif;
+    white-space:pre-line;
+}
+
+.navbar-toggler {
+    background-color: #808080;
+}
+
+.img-thumbnail{
+    padding: .05rem;
+}
+
+.col-base{
+    padding-bottom: 15px;
+}
+
+footer{
+    background-color: black;
+}
+
+@media (min-width:2000px) {
+    .col-4k-2 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media (max-width:767px) {
+    #blurb {
+        display: none;
+    }
+
+    img.logo {
+        width: 25%;
+        height: auto;
+        float: left;
+    }
 }
 
 @media (min-width:768px) {
+    .container {
+        max-width: 99%;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    body {
+        margin-left: 350px;
+    }
+
     .navbar.fixed-left {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: auto;
         bottom: 0;
         width: 350px;
+        z-index: 1030;
         flex-flow: column nowrap;
         align-items: flex-start
     }
@@ -41,25 +75,6 @@
             flex-direction: column;
             width: 100%
         }
-
-            .navbar.fixed-left .navbar-collapse .navbar-nav {
-                flex-direction: column;
-                width: 100%
-            }
-
-                .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item {
-                    width: 100%
-                }
-
-                    .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
-                        top: 0
-                    }
-}
-
-@media (min-width:768px) {
-    .navbar.fixed-left {
-        right: auto
-    }
 
         .navbar.fixed-left .navbar-nav .nav-item .dropdown-toggle:after {
             border-top: .3em solid transparent;
@@ -72,4 +87,17 @@
         .navbar.fixed-left .navbar-nav .nav-item .dropdown-menu {
             left: 100%
         }
+
+        .navbar.fixed-left .navbar-collapse .navbar-nav {
+            flex-direction: column;
+            width: 100%
+        }
+
+            .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item {
+                width: 100%
+            }
+
+                .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
+                    top: 0
+                }
 }

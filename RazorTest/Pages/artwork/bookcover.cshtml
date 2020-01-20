@@ -1,0 +1,19 @@
+﻿@page
+@model RazorTest.Pages.artwork.bookcoverModel
+@{
+    ViewData["Title"] = Constants.NAME_WITH_COLON + "Book Cover";
+    ViewData["Blurb"] = "Medium:  Adobe Illustrator\n\n"
+        + "Notes:  This was a school project where I had to come up with an alternate cover to one of my favorite books.";
+}
+
+<div>
+    <div class='rightbig'>
+        <div class='imgfull'>
+            <h1>Digital Artwork</h1>
+            <h2>Evermore Book Cover - 2013</h2>
+            <hr>
+            <br>
+            <figure><img src='~/art/SimpkinsBookCover.png' alt='Re-imagined Cover for Evermore by Alyson Noel'></figure>
+        </div>
+    </div>
+</div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RazorTest</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/bootstrap_extension.css" />
@@ -14,13 +14,14 @@
 <body style="overflow-x:hidden">
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-left">
+
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index"><img src='~/img/letteredlogousmall.png' alt='logo'></a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index"><img class="logo" src='~/img/letteredlogousmall.png' alt='logo'></a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
             </div>
 
             <div class="leftnavbutton navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
@@ -39,7 +40,7 @@
                     </li>
                 </ul>
             </div>
-            <p style="font-family:'Raleway'">My Portfolio holds my completed personal pieces of work as well as work studies.&nbsp;&nbsp;I will be continually adding to this.&nbsp;&nbsp;The works are divided into two sections, Digital and Traditional.</p>
+            <p id="blurb">@ViewData["Blurb"]</p>
         </nav>
         <div class='line'>
             <img src='~/img/sticks.png'>
