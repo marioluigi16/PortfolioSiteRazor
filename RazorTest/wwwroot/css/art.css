@@ -288,6 +288,7 @@ nav {
     min-height: 10%;
     min-width: 10%;
     max-width: 75%;
+    max-height: 85vh;
     padding-bottom: 50px;
     margin-right: 30px;
     margin-left: 20px;
