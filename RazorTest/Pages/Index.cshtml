@@ -5,126 +5,37 @@
     ViewData["Blurb"] = "My Portfolio holds my completed personal pieces of work as well as work studies.  I will be continually adding to this.  The works are divided into two sections, Digital and Traditional.";
 }
 
+@{
+    // this will be replaced by a db call
+    DBManager mgr = new DBManager();
+
+    List<Models.ArtItem> lstDigitalItems = mgr.GetDigitalArtwork();
+    List<Models.ArtItem> lstTraditionalItems = mgr.GetTraditionalArtwork();
+}
+
+
 <div class="jumbotron-ext jumbotron">
     <h1>Digital Artwork</h1>
     <div class="row">
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/emptystreetnew"><img src='art/emptystreetnew.png' alt='Empty Street' style="width:100%"></a>
+        @foreach (Models.ArtItem item in lstDigitalItems)
+        {
+            <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
+                <div class="img-thumbnail">
+                    <a asp-area="" asp-page=@item.AspPage><img src=@item.SrcFile alt=@item.AltText style="width:100%"></a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/bookcover"><img src='art/SimpkinsBookCover.png' alt='Re-imagined Cover for Evermore by Alyson Noel' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/ideas"><img src='art/ideas.png' alt='Ideas' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/tobeydog"><img src='art/tobeydog.jpg' alt='TobeyDog' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/otherworldly"><img src='art/otherworldly.jpg' alt='Otherworldly' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/alphabet"><img src='art/alphabet.png' alt='Alphabet' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/torontoposter"><img src='art/torontoposter.png' alt='Toronto Vintage Travel Poster' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/comiccover"><img src='art/comiccover.jpg' alt='Comic Book Cover' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/evermore"><img src='art/evermore.png' alt='Evermore Poster' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/simpkinsrealisticobject"><img src='art/SimpkinsRealisticObject.jpg' alt='Dr. Enuf Bottle' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/b0b"><img src='art/b0b.png' alt='B.0.B' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/scythehaven"><img src='art/scythehaven.jpg' alt='Moon Scythe' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/peaceful"><img src='art/peaceful.png' alt='Peaceful Word Art' style="width:100%"></a>
-            </div>
-        </div>
+        }
     </div>
+
     <h1>Traditional Artwork</h1>
     <div class="row">
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/traditional/flowerwater"><img src='art/flowerwater.png' alt='Watercolor School Study' style="width:100%"></a>
+        @foreach (Models.ArtItem tradItem in lstTraditionalItems)
+        {
+            <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
+                <div class="img-thumbnail">
+                    <a asp-area="" asp-page=@tradItem.AspPage><img src=@tradItem.SrcFile alt=@tradItem.AltText style="width:100%"></a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/traditional/_1point"><img src='art/1point.png' alt='One Point Perspective Drawing' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/traditional/twopoint"><img src='art/twopoint.png' alt='Two Point Perspective Drawing' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/traditional/blanket2"><img src='art/blanket2.png' alt='Fabric Study 2' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/traditional/darkshapes"><img src='art/darkshapes.png' alt='Dark Shapes' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/traditional/mattissestudy"><img src='art/mattissestudy.png' alt='Mattisse Study' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/traditional/watercolorme"><img src='art/watercolorme.png' alt='Childhood Watercolor' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/traditional/cayenne3"><img src='art/cayenne3.png' alt='Cayenne' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/traditional/sillyme"><img src='art/sillyme.png' alt='Silly Self Portrait' style="width:100%"></a>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
-            <div class="img-thumbnail">
-                <a asp-area="" asp-page="/artwork/traditional/blanket1"><img src='art/blanket1.png' alt='Fabric Study 1' style="width:100%"></a>
-            </div>
-        </div>
+        }
     </div>
 </div>
