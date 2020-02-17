@@ -1,0 +1,42 @@
+﻿@page
+@model RazorTest.Pages.AddItemModel
+@{
+}
+
+
+<div>
+    <div class="rightbig">
+        <form method="post" style="margin-left:25px">
+            <fieldset>
+                <legend>Add Artwork</legend>
+                <div>
+                    <label for="Type">Type</label>
+                    <select name="Type">
+                        <option value="Digital">Digital Artwork</option>
+                        <option value="Traditional">Traditional Artwork</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="Title">Title</label>
+                    <input type="text" name="Title" value="" />
+                </div>
+                <div>
+                    <label for="CreateDate">Creation Date</label>
+                    <input type="date" name="CreateDate" value="" />
+                </div>
+                <div>
+                    <label for="Description">Description</label>
+                    <textarea name="Description" rows="5" cols="80"></textarea>
+                </div>
+                <div>
+                    <label for="Img">Image</label>
+                    <input type="file" name="Img" value="" />
+                </div>
+                <div>
+                    <label>&nbsp;</label>
+                    <input type="submit" value="Submit" />
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
