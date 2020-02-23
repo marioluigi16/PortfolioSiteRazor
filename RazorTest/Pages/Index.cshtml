@@ -6,24 +6,25 @@
 }
 
 @{
-    
-
     // this will be replaced by a db call
     DBManager mgr = new DBManager();
+    List<Models.Artwork> lstDigitalItems = Model.LstDigiArt;
+    List<Models.Artwork> lstTraditionalItems = Model.LstTradArt;
 
-    List<Models.ArtItem> lstDigitalItems = mgr.GetDigitalArtwork();
-    List<Models.ArtItem> lstTraditionalItems = mgr.GetTraditionalArtwork();
+    string srcFilePath;
 }
 
 
 <div class="jumbotron-ext jumbotron">
     <h1>Digital Artwork</h1>
     <div class="row">
-        @foreach (Models.ArtItem item in lstDigitalItems)
+        @foreach (Models.Artwork item in lstDigitalItems)
         {
+            srcFilePath = "art/" + item.SrcFile;
+
             <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
                 <div class="img-thumbnail">
-                    <a asp-area="" asp-page=@item.AspPage><img src=@item.SrcFile alt=@item.AltText style="width:100%"></a>
+                    <a asp-area="" asp-page="Detail" asp-route-ID="@item.ID"><img src=@srcFilePath alt=@item.Title style="width:100%"></a>
                 </div>
             </div>
         }
@@ -31,11 +32,13 @@
 
     <h1>Traditional Artwork</h1>
     <div class="row">
-        @foreach (Models.ArtItem tradItem in lstTraditionalItems)
+        @foreach (Models.Artwork tradItem in lstTraditionalItems)
         {
+            srcFilePath = "art/" + tradItem.SrcFile;
+
             <div class="col-md-6 col-lg-4 col-xl-3 col-4k-2 col-base">
                 <div class="img-thumbnail">
-                    <a asp-area="" asp-page=@tradItem.AspPage><img src=@tradItem.SrcFile alt=@tradItem.AltText style="width:100%"></a>
+                    <a asp-area="" asp-page="Detail" asp-route-ID="@tradItem.ID"><img src=@srcFilePath alt=@tradItem.Title style="width:100%"></a>
                 </div>
             </div>
         }

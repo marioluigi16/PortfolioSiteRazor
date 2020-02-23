@@ -1,19 +1,18 @@
-﻿@page
+﻿@page "{ID:int}"
 @model RazorTest.Pages.DetailModel
 @{
-    ViewData["Title"] = Constants.NAME_WITH_COLON + "Alphabet";
-    ViewData["Blurb"] = "Medium:  Poster board, Alphabits Cereal, and Canon Rebel i5\n\n"
-        + "Notes:  School project which was to create an unusual and creative display of the alphabet.";
+    ViewData["Title"] = Constants.NAME_WITH_COLON + Model.ArtItem.Title;
+    ViewData["Blurb"] = Model.ArtItem.Description;
 }
 
 <div>
     <div class='rightbig'>
         <div class='imgfull'>
-            <h1>Digital Artwork</h1>
-            <h2>Alphabet - 2014</h2>
+            <h1>@Model.ArtItem.Type Artwork</h1>
+            <h2>@Model.ArtItem.Title - @Model.GetDate()</h2>
             <hr>
             <br>
-            <figure><img src='~/art/alphabet.png' alt='Alphabet'></figure>
+            <figure><img src=@Model.GetSrcFilePath() alt=@Model.ArtItem.Title></figure>
         </div>
     </div>
 </div>
