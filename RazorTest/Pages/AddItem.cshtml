@@ -6,7 +6,7 @@
 
 <div>
     <div class="rightbig">
-        <form method="post" style="margin-left:25px">
+        <form method="post" enctype="multipart/form-data" style="margin-left:25px">
             <fieldset>
                 <legend>Add Artwork</legend>
                 <div>
@@ -29,8 +29,8 @@
                     <textarea name="Description" rows="5" cols="80"></textarea>
                 </div>
                 <div>
-                    <label for="Img">Image</label>
-                    <input type="file" name="Img" value="" />
+                    <label for="Upload">Image</label>
+                    <input type="file" asp-for="Upload" name="Upload" />
                 </div>
                 <div>
                     <label>&nbsp;</label>
